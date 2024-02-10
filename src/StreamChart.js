@@ -15,17 +15,6 @@ export const StreamChart = ({ pitchValues }) => {
     ],
   });
 
-// const chartData = useMemo(() => ({
-//     labels: pitchValues.map((_, index) => index.toString()), 
-//     datasets: [
-//       {
-//         label: 'Pitch',
-//         data: pitchValues,
-//         borderColor: 'rgb(75, 192, 192)',
-//         tension: 0.1,
-//       },
-//     ],
-//   }), [pitchValues]);
 
   const options = {
     scales: {
@@ -52,5 +41,4 @@ export const StreamChart = ({ pitchValues }) => {
   }, [pitchValues]);
 
   return < Line style={{height:'200px', width: '100px'}} data={chartData} options={options} height={200}/>;
-//   return <div>{JSON.stringify(chartData)}</div>
 };
